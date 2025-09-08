@@ -18,7 +18,7 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       title: 'Studio Ghibli',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       home: const MyHomePage(),
     );
@@ -40,21 +40,37 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('assets/Ghibli.jpg',
-              width: 500,
-              height: 500,
+              width: 300,
+              height: 300,
             ),
-            const Text(
-              'Howls Moving Castle',
-              style: TextStyle(fontSize: 25, color: Colors.pink),
+            
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: const Text(
+                'Howl’s Moving Castle',
+                style: TextStyle(
+                  fontSize: 20, 
+                  fontWeight: FontWeight.bold, 
+                  color: Colors.blue,
+                  ),
+                  
+              ),
             ),
 
-            const Text(
-              'The story follows Sophie Hatter, a young milliner who is transformed into an elderly woman by the Witch of the Waste. In her quest to break the curse, '
-                  'Sophie encounters the enigmatic wizard Howl and his magical moving castle. Alongside Calcifer, a fire demon who powers the castle, '
-                  'and Markl, Howl's apprentice, Sophie embarks on a journey filled with adventure and self-discovery. The film intertwines elements of fantasy with the harsh realities of war'
-                  'as Sophie learns about love, courage, and the importance of inner beauty.',
-              style: TextStyle(fontSize: 20),
-              textAlign: TextAlign.center,
+            Container(
+              padding: const EdgeInsets.all(12),
+              margin: const EdgeInsets.symmetric (horizontal: 16),
+              child: const Text(
+                'Howl’s Moving Castle (2004) is a Studio Ghibli fantasy film directed by Hayao Miyazaki. It tells the story of Sophie, a young woman cursed by the Witch of the Waste to become an old woman. ' 
+                'Seeking a cure, she enters the magical moving castle of the wizard Howl, where she meets his fire demon Calcifer and apprentice Markl. As Sophie and Howl grow closer,'
+                'she helps him face his own struggles while also discovering her inner strength. The movie beautifully blends themes of love, courage, and the futility of war with stunning animation and music.',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic,
+                  letterSpacing: 1.2,
+                  ), 
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
